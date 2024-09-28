@@ -47,8 +47,34 @@ public class ArrayManipulator {
 
         //string arr to int arr
         try {
-        for(int i = 0; i)}
-    }
+        for(int i = 0; i<inputNumber.length; i++){
+            numbers[i] = Integer.parseInt(inputNumbers[i]);
+            }
+    } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter integers only");
+            return;
 
 }
+        while(true) {
+            System.out.println("\nChoose an option:");
+            System.out.println("1. Sort the array");
+            System.out.println("2. Reverse the array");
+            System.out.println("3. Remove duplicates");
+            System.out.println("Exit");
+            System.out.println("Your Choice : ");
+
+            int choice;
+            try{
+                choice = sc.nextInt();
+            } catch(InoutMismatchException e) {
+                System.out.println("Invalid choice. Please enter a number between 1 and 3.");
+                sc.next();
+                continue;
+            }
+            switch(choice) {
+                case 1: 
+                    int[] reversedArray = reverse(numbers);
+                    System.out.println("Reversed Arrat: ");
+                    displayArray(reversedArray);
+                    break;
  
