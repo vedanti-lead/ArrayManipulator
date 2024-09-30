@@ -67,7 +67,7 @@ public class ArrayManipulator {
             try{
                 choice = sc.nextInt();
             } catch(InoutMismatchException e) {
-                System.out.println("Invalid choice. Please enter a number between 1 and 3.");
+                System.out.println("Invalid choice. Please enter a number between 1 and 4.");
                 sc.next();
                 continue;
             }
@@ -77,4 +77,27 @@ public class ArrayManipulator {
                     System.out.println("Reversed Arrat: ");
                     displayArray(reversedArray);
                     break;
+                case 2:
+                    int[] sortedArray = sort(numbers.clone());
+                    System.out.println("Sorted array: ");
+                    displayArray(sortedArray);
+                    break;
+                case 3:
+                    int[] uniqueArray = duplicate(numbers);
+                        System.out.println("Array with duplicates removed: ");
+                    displayArray(uniqueArray);
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid Choice. Please choose again.);
+            }
+        }
+    }
+}
+                    
+                    
+                    
  
