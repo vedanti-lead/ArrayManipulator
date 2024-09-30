@@ -32,7 +32,7 @@ public class ArrayManipulator {
         return uni;
     }
     //display the array
-    public static void display(int[] arr) {
+    public static void displayArray(int[] arr) {
         System.out.println(Arrays.toString(arr));
     }
 
@@ -40,14 +40,14 @@ public class ArrayManipulator {
         Scanner sc = new Scanner(System.in);
 
         //input from user
-        System.out.println("Enter the numbers separated by spaces")'
+        System.out.println("Enter the numbers separated by spaces");
         String input = sc.nextLine();
         String[] inputNumbers = input.split("\\s+");
         int[] numbers = new int[inputNumbers.length];
 
         //string arr to int arr
         try {
-        for(int i = 0; i<inputNumber.length; i++){
+        for(int i = 0; i<inputNumbers.length; i++){
             numbers[i] = Integer.parseInt(inputNumbers[i]);
             }
     } catch (NumberFormatException e) {
@@ -66,7 +66,7 @@ public class ArrayManipulator {
             int choice;
             try{
                 choice = sc.nextInt();
-            } catch(InoutMismatchException e) {
+            } catch(InputMismatchException e) {
                 System.out.println("Invalid choice. Please enter a number between 1 and 4.");
                 sc.next();
                 continue;
@@ -89,10 +89,10 @@ public class ArrayManipulator {
                     break;
                 case 4:
                     System.out.println("Exiting...");
-                    scanner.close();
+                    sc.close();
                     return;
                 default:
-                    System.out.println("Invalid Choice. Please choose again.);
+                    System.out.println("Invalid Choice. Please choose again.");
             }
         }
     }
